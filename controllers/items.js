@@ -81,7 +81,7 @@ module.exports = {
                     decimals: 00,
                   },
                   picture: resultPerId.thumbnail,
-                  condition: resultPerId.condition,
+                  condition: (resultPerId.condition === 'new') ? 'Nuevo' : 'Usado',
                   free_shipping: resultPerId.shipping.free_shipping,
                   sold_quantity: resultPerId.sold_quantity,
                   description: description.plain_text,
