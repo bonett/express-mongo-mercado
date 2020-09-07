@@ -41,7 +41,7 @@ module.exports = {
                 decimals: 00,
               },
               picture: item.thumbnail,
-              condition: item.condition,
+              condition: (item.condition === 'new') ? 'Nuevo' : 'Usado',
               free_shipping: item.shipping.free_shipping,
               address: item.address.state_name,
             };
