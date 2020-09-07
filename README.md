@@ -26,9 +26,7 @@ With npm
 npm install
 ```
 
-## Usage example
-
-To run server
+## Usage - IMPORTANT install globally => npm install -g nodemon) to run server
 
 With npm: 
 
