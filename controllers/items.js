@@ -10,8 +10,7 @@ const author = {
 
 module.exports = {
   index: async (req, res) => {
-    /* const queryString = res.query.q; */
-    const queryString = "apple ipod";
+    const queryString = req.query.q;
     Request.get(
       `${API_URL}sites/MLA/search?q=${queryString}`,
       (error, response, body) => {
