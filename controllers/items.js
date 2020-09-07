@@ -36,11 +36,11 @@ module.exports = {
               title: item.title,
               price: {
                 currency: item.currency_id,
-                amount: item.price,
-                decimals: 00,
+                amount: parseInt(item.price.toString().split(".")[0]),
+                decimals: parseInt(item.price.toString().split(".")[1])
               },
               picture: item.thumbnail,
-              condition: (item.condition === 'new') ? 'Nuevo' : 'Usado',
+              condition: item.condition === "new" ? "Nuevo" : "Usado",
               free_shipping: item.shipping.free_shipping,
               address: item.address.state_name,
             };
@@ -77,11 +77,12 @@ module.exports = {
                   title: resultPerId.title,
                   price: {
                     currency: resultPerId.currency_id,
-                    amount: resultPerId.price,
-                    decimals: 00,
+                    amount: parseInt(resultPerId.price.toString().split(".")[0]),
+                    decimals: parseInt(resultPerId.price.toString().split(".")[1]),
                   },
                   picture: resultPerId.thumbnail,
-                  condition: (resultPerId.condition === 'new') ? 'Nuevo' : 'Usado',
+                  condition:
+                    resultPerId.condition === "new" ? "Nuevo" : "Usado",
                   free_shipping: resultPerId.shipping.free_shipping,
                   sold_quantity: resultPerId.sold_quantity,
                   description: description.plain_text,
