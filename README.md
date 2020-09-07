@@ -9,7 +9,7 @@ Server developed with Node & Express.
 Clone Repository:
 
 ```sh
-git clone https://github.com/bonett/mercado-libre-app.git
+git clone https://github.com/bonett/mercado-libre-server.git
 ```
 
 Enter to root folder:
